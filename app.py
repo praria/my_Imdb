@@ -38,5 +38,9 @@ def get_drama_movies():
 def get_romance_movies():
     return jsonify(filter_by_genre('Romance'))
 
+@app.route('/western', methods=['GET'])
+def get_western_movies():
+    return jsonify(filter_by_genre('Western'))
+
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=8080, debug=True)
